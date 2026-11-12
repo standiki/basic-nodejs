@@ -23,20 +23,25 @@ Follow these steps to clone and run the project on your local machine:
 
    ```bash
    git clone git@github.com:standiki/basic-nodejs.git
+   ```
+
+2. **Change directory to project folder**
+
+   ```bash
    cd basic-node-site
    ```
 
-2. **Install dependencies**
+3. **Install dependencies**
 
    ```bash
    pnpm install
    ```
 
-3. **Start the server**
+4. **Start the server**
 
    ```bash
    pnpm dev
    ```
 
-4. **Open in your browser**
+5. **Open in your browser**
    Visit `http://localhost:3000` to view the application.
