@@ -22,13 +22,13 @@ Follow these steps to clone and run the project on your local machine:
 1. **Clone the repository**
 
    ```bash
-   git clone git@github.com:standiki/basic-nodejs.git
+   git clone https://github.com/standiki/basic-nodejs.git
    ```
 
 2. **Change directory to project folder**
 
    ```bash
-   cd basic-node-site
+   cd basic-nodejs
    ```
 
 3. **Install dependencies**
