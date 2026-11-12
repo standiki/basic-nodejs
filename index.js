@@ -1,38 +1,16 @@
-const http = require("node:http");
-const fs = require("node:fs");
+const express = require("express");
+const app = express();
 
-const server = http.createServer((req, res) => {
-  res.writeHead(200, { "content-Type": "text/html" });
+const PORT = 3000;
 
-  let path = "./views/";
-
-  switch (req.url) {
-    case "/":
-      path += "index.html";
-      break;
-
-    case "/about":
-      path += "about.html";
-      break;
-
-    case "/contact":
-      path += "contact-me.html";
-      break;
-
-    default:
-      path += "404.html";
-      break;
-  }
-
-  fs.readFile(path, (err, data) => {
-    if (err) {
-      console.log(err);
-      res.end("Error reading file", req.url);
-    }
-    res.end(data);
-  });
+app.get("/", (req, res) => {
+  res.send("Hello World!");
 });
 
-server.listen(3000, "localhost", () => {
-  console.log("Server is running on port 3000");
+app.listen(PORT, (error) => {
+  // Don't silently fail, give hint for why failing
+  if (error) {
+    throw error;
+  }
+  console.log(`port running on localhost:${PORT}!`);
 });
